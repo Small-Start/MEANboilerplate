@@ -1,0 +1,40 @@
+<!-- public/views/index.html -->
+<!doctype html>
+<html lang="en" ng-app="startMean">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Starter MEAN Single Page Application</title>
+  <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/vendor/simplemde/dist/simplemde.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h2 class="pageheader">Hello MEAN</h2>
+  <textarea class="editor"></textarea>
+    </div>
+    <a href="/#/nerd" class="btn btn-warning">Load Nerd</a>
+    <div ng-view></div>
+  </div>
+  <!-- Vendor -->
+  <script src="/vendor/jquery/dist/jquery.min.js "></script>
+  <script src="/vendor/bootstrap/dist/js/bootstrap.min.js "></script>
+  <script src="/vendor/angular/angular.min.js "></script>
+  <script src="/vendor/angular-route/angular-route.min.js "></script>
+  <script src="/vendor/simplemde/dist/simplemde.min.js "></script>
+
+  <!-- Custom -->
+  <script src="/views/module.js "></script>
+  <script src="/views/nerdDash/module.js "></script>
+  <script src="/views/nerdDash/nerdCtrl.js "></script>
+  <script src="/views/nerdDash/nerdService.js "></script>
+  <script src="/views/nerdDash/viewNerd/viewNerdCtrl.js "></script>
+  <script>
+  var simplemde = new SimpleMDE({
+   element: document.querySelector(".editor") ,
+   showIcons: ["code"]
+ });
+  </script>
+</body>
+</html>
